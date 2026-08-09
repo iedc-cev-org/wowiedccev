@@ -3,6 +3,7 @@ import About from "@/components/About";
 import Events from "@/components/Events";
 import Gallery from "@/components/Gallery";
 import Team from "@/components/Team";
+import Connect from "@/components/Connect";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Events />
       <Gallery />
       <Team />
+      <Connect />
     </main>
   );
 }

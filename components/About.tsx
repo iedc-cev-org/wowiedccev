@@ -19,8 +19,8 @@ export default function About() {
 
             {/* Floating Accent Card */}
             <div className="absolute -bottom-8 -right-8 bg-white/70 backdrop-blur-xl border border-white p-6 rounded-3xl shadow-xl animate-float-delayed">
-              <p className="text-plum font-heading font-bold text-3xl">500+</p>
-              <p className="text-plum/60 font-sans text-xs uppercase tracking-widest font-semibold mt-1">Women Empowered</p>
+              <p className="text-plum font-heading font-bold text-3xl">#Women In Tech</p>
+              {/* <p className="text-plum/60 font-sans text-xs uppercase tracking-widest font-semibold mt-1">bla bla bla</p> */}
             </div>
             
             {/* Decorative Sparkle */}

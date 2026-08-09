@@ -1,56 +1,41 @@
-import Link from "next/link";
-
 export default function Footer() {
   return (
-    <footer className="w-full px-4 md:px-8 py-12 relative z-10">
-      <div className="max-w-6xl mx-auto clay-card !rounded-[40px] bg-white/40 backdrop-blur-md p-10 md:p-16 border border-white/50">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Brand Column */}
-          <div className="md:col-span-2 space-y-6">
-            <Link href="/" className="flex items-center gap-2 group w-fit">
-              <span className="text-3xl transition-transform duration-300 group-hover:rotate-12" role="img" aria-label="sparkles">✨</span>
-              <span className="font-heading font-bold text-3xl tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-plum to-crimson">
-                WOW
-              </span>
-            </Link>
-            <p className="text-plum/80 font-sans max-w-sm leading-relaxed">
-              The specialized women's wing of the Innovation and Entrepreneurship Development Cell at CEV. Empowering women through community, mentorship, and magic.
-            </p>
-          </div>
+    <footer className="w-full relative z-10 bg-background overflow-hidden border-t border-mauve/20 group h-32 hover:h-64 transition-[height] duration-500 ease-out cursor-default mt-20">
+      
+      {/* Boring state (Visible before hover) */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-500 group-hover:opacity-0 delay-100">
+         <p className="text-plum/50 font-sans text-sm md:text-base font-semibold tracking-wide">
+           © {new Date().getFullYear()} WOW IEDC CEV
+         </p>
+         {/* <p className="text-plum/40 font-sans text-xs mt-2 animate-pulse">
+           (Hover me 👀)
+         </p> */}
+      </div>
 
-          {/* Quick Links Column */}
-          <div className="space-y-6">
-            <h4 className="text-xl font-heading text-plum font-semibold">Quick Links</h4>
-            <ul className="space-y-3 font-sans text-plum/70 font-medium">
-              <li><Link href="#about" className="hover:text-crimson transition-colors flex items-center gap-2"><span className="text-xs">🌸</span> Our Mission</Link></li>
-              <li><Link href="#events" className="hover:text-crimson transition-colors flex items-center gap-2"><span className="text-xs">🌸</span> Upcoming Events</Link></li>
-              <li><Link href="#gallery" className="hover:text-crimson transition-colors flex items-center gap-2"><span className="text-xs">🌸</span> Gallery</Link></li>
-              <li><Link href="#team" className="hover:text-crimson transition-colors flex items-center gap-2"><span className="text-xs">🌸</span> Meet the Team</Link></li>
-            </ul>
-          </div>
+      {/* Magical WOW state (Visible on hover) */}
+      <div className="absolute inset-0 bg-alabaster/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+        
+        {/* Magical Background Glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-lilac/30 via-background/0 to-transparent"></div>
+        
+        {/* Floating Themed Icons */}
+        <span className="absolute top-6 left-12 text-2xl animate-float opacity-50">✨</span>
+        <span className="absolute bottom-4 left-1/3 text-xl animate-float-delayed opacity-60">🌸</span>
+        <span className="absolute top-4 right-1/3 text-lg animate-float opacity-60">💡</span>
+        <span className="absolute bottom-8 right-12 text-2xl animate-float-delayed opacity-50">✨</span>
+        
+        <h2 
+          className="font-heading relative z-10 text-3xl md:text-5xl font-bold text-plum/90 tracking-wide -rotate-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out"
+        >
+          What are you Looking For???? A Footer?!
+        </h2>
+        
+        <p 
+          className="font-heading relative z-10 text-xl md:text-3xl text-mauve font-medium mt-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out delay-75 max-w-2xl"
+        >
+          We're too busy empowering women in tech and building magic! <span className="inline-block animate-bounce text-2xl ml-2">🌸</span>
+        </p>
 
-          {/* Connect Column */}
-          <div className="space-y-6">
-            <h4 className="text-xl font-heading text-plum font-semibold">Connect</h4>
-            <div className="flex gap-4">
-              <a href="#" className="w-12 h-12 rounded-full bg-white/60 flex items-center justify-center text-sm font-bold text-plum hover:bg-lilac hover:text-white transition-all shadow-[inset_2px_2px_5px_rgba(255,255,255,0.7)] hover:shadow-[0_5px_15px_rgba(183,156,237,0.4)] hover:-translate-y-1">
-                IG
-              </a>
-              <a href="#" className="w-12 h-12 rounded-full bg-white/60 flex items-center justify-center text-sm font-bold text-plum hover:bg-lilac hover:text-white transition-all shadow-[inset_2px_2px_5px_rgba(255,255,255,0.7)] hover:shadow-[0_5px_15px_rgba(183,156,237,0.4)] hover:-translate-y-1">
-                IN
-              </a>
-              <a href="#" className="w-12 h-12 rounded-full bg-white/60 flex items-center justify-center text-sm font-bold text-plum hover:bg-lilac hover:text-white transition-all shadow-[inset_2px_2px_5px_rgba(255,255,255,0.7)] hover:shadow-[0_5px_15px_rgba(183,156,237,0.4)] hover:-translate-y-1">
-                X
-              </a>
-            </div>
-            <p className="text-plum/70 font-sans mt-4">hello@wowcev.com</p>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-plum/10 flex justify-center text-plum/60 font-sans text-sm font-medium">
-          <p>© {new Date().getFullYear()} WOW IEDC CEV. All rights reserved.</p>
-        </div>
       </div>
     </footer>
   );
