@@ -16,8 +16,8 @@ export default function Navbar() {
   ];
 
   return (
-    <div className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-5xl px-4 transition-transform duration-300 ${!isOpen ? 'animate-float-delayed' : ''}`}>
-      <nav className={`px-6 py-4 md:px-8 bg-alabaster/80 backdrop-blur-xl border border-white/50 shadow-[0_8px_32px_rgba(183,156,237,0.2),inset_-2px_-2px_6px_rgba(43,35,44,0.05),inset_2px_2px_6px_rgba(255,255,255,0.8)] ${
+    <div className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-5xl px-4 transition-transform duration-300`}>
+      <nav className={`px-6 py-4 md:px-8 bg-alabaster/80 backdrop-blur-md border border-white/50 shadow-[0_8px_32px_rgba(183,156,237,0.2),inset_-2px_-2px_6px_rgba(43,35,44,0.05),inset_2px_2px_6px_rgba(255,255,255,0.8)] ${
         isOpen ? "rounded-3xl" : "rounded-full"
       }`}>
         <div className="flex items-center justify-between">
